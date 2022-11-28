@@ -1,25 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+
+const Desc = styled.p`
+  color: blue;
+`;
+
+const Wrapper = styled.div`
+  padding: 1.5rem;
+`;
+
+const Title = styled.h2`
+  font-weight: 900;
+  margin-top: 2rem;
+`;
+
+const NoteInput = styled.input`
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+`;
+
+const SubmitBtn = styled.button`
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+  border: 0;
+  font-weight: 900;
+  margin-top: 1rem;
+
+  :active {
+    background: #000000be;
+  }
+`;
+
+const Item = styled.div`
+  margin-top: 1rem;
+
+  > b {
+    margin-right: 0.5rem;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Title>TODO LIST</Title>
+      <Desc>Hello</Desc>
+      <NoteInput type="text" />
+      <SubmitBtn>Submit</SubmitBtn>
+      <SubmitBtn>Record Timestamp</SubmitBtn>
+      <Title>List</Title>
+    </Wrapper>
   );
 }
 
